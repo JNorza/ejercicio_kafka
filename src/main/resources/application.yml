@@ -1,0 +1,21 @@
+server:
+    port: 3500
+spring:
+    application:
+        name: ejercicio_kafka
+
+# MySql
+    datasource:
+        url: jdbc:mysql://localhost:3306/ejercicio_kafka
+        username: root
+        password: test123
+    jpa:
+        hibernate:
+            ddl-auto: update
+    
+#kafka
+    kafka:
+        producer:
+            bootstrap-servers: localhost:9092
+            key-serializer: org.apache.kafka.common.serialization.StringSerializer
+            value-serializer: org.apache.kafka.common.serialization.StringSerializer
